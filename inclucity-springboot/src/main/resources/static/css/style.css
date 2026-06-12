@@ -15,6 +15,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -22,6 +23,13 @@ body {
     line-height: 1.6;
     color: var(--dark-color);
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main, .main-content {
+    flex: 1 0 auto;
 }
 
 /* Typography */
@@ -246,6 +254,7 @@ p {
 /* Navigation */
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
 .navbar-brand {
@@ -267,7 +276,7 @@ p {
 
 /* Footer */
 footer {
-    margin-top: 3rem;
+    flex-shrink: 0;
     border-top: 1px solid #c5e1a5;
 }
 
@@ -294,6 +303,49 @@ footer {
 
     .container {
         padding: 0 1rem;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Mobile Table to Cards */
+    .mobile-table-to-cards thead {
+        display: none;
+    }
+
+    .mobile-table-to-cards tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #c5e1a5;
+        border-radius: 0.5rem;
+        background: #fff;
+        padding: 0.5rem;
+    }
+
+    .mobile-table-to-cards td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid #f1f8e9;
+    }
+
+    .mobile-table-to-cards td:last-child {
+        border-bottom: none;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    .mobile-table-to-cards td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        text-align: left;
+        color: var(--primary-color);
+        margin-right: 1rem;
     }
 }
 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="height: 5rem;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="min-height: 5rem;">
         <div class="container">
             <a class="navbar-brand fw-bold" th:href="@{/}">INCLUCITY</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -25,7 +25,7 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <main class="container mt-5">
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h1 class="mb-4 text-success text-center">Consultar Solicitação</h1>
@@ -37,10 +37,10 @@
                 <form th:action="@{/solicitacoes/consultar}" method="post" class="card p-5 shadow-sm mb-4">
                     <div class="mb-4">
                         <label for="protocolo" class="form-label fw-bold">Número do Protocolo</label>
-                        <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" id="protocolo" name="protocolo"
+                        <div class="input-group input-group-lg flex-column flex-sm-row">
+                            <input type="text" class="form-control w-100 w-sm-auto mb-2 mb-sm-0" id="protocolo" name="protocolo"
                                    placeholder="Ex: ABC12345" required>
-                            <button class="btn btn-primary px-4" type="submit">Buscar Agora</button>
+                            <button class="btn btn-primary px-4 w-100 w-sm-auto" type="submit">Buscar Agora</button>
                         </div>
                         <small class="form-text text-muted">O protocolo foi fornecido quando você registrou a solicitação.</small>
                     </div>
@@ -51,15 +51,17 @@
                     <p class="mb-0">Se você perdeu seu número de protocolo, entre em contato com a central de atendimento ao cidadão.</p>
                 </div>
 
-                <div class="text-center mt-5">
+                <div class="text-center mt-5 mb-5">
                     <a th:href="@{/}" class="btn btn-light btn-lg">Voltar para a Home</a>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-        <p class="mb-0">&copy; 2026 IncluCity. ODS 11: Cidades e Comunidades Sustentáveis</p>
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 IncluCity. ODS 11: Cidades e Comunidades Sustentáveis</p>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
