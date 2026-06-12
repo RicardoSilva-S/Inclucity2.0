@@ -2,6 +2,18 @@
 
 Este projeto é a versão 2.0 do IncluCity, evoluída de Java SE Puro para Spring Boot 3, utilizando arquitetura MVC em camadas com templates Thymeleaf. Ele oferece uma experiência Web completa com organização profissional de código, validação de formulários e separação clara de responsabilidades.
 
+🔄**Como rodar**
+* **Baixar o zip do repositório**
+* **Extraia o ZIP: Descompacte o arquivo.**
+* **Abra na IDE:**
+    * 1 No IntelliJ, vá em File > Open e selecione a pasta inclucity-springboot.
+    * 2 No VS Code, abra a pasta e aceite a importação do projeto Maven quando solicitado.
+* **Execute a aplicação:**
+    * 1 Localize o arquivo principal em: src/main/java/com/inclucity/web/IncluCityApplication.java.
+    * 2 Clique com o botão direito nele e selecione "Run 'IncluCityApplication'".
+**Acesse o site:**
+Após o terminal indicar que o Spring iniciou com sucesso, abra o seu navegador e acesse: **http://localhost:8080**
+
 ## 📋 Funcionalidades e Diferenciais
 
 * **Interface Web Completa:** Páginas HTML estilizadas com a paleta verde (sustentabilidade/natureza), renderizadas via Thymeleaf com dados dinâmicos injetados pelo servidor.
